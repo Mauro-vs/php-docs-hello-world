@@ -2,8 +2,11 @@
 // Recuperar variables de entorno
 $dbHost = getenv('DB_HOST');
 $dbName = "prueba";
-$dbUser = getenv('DB_USER');
-$dbPass = getenv('DB_PASSWORD');
+// $dbUser = getenv('DB_USER');      <-- Comenta esto
+// $dbPass = getenv('DB_PASSWORD');  <-- Comenta esto
+
+$dbUser = "prueba";                  // <-- Ponlo directo
+$dbPass = "ContraseñaSegura!";       // <-- Ponla directa (la misma del ALTER USER)
 if (!$dbHost || !$dbUser || $dbPass === false) {
     throw new \RuntimeException('Faltan variables de entorno para la conexión a la base de datos.');
 }
